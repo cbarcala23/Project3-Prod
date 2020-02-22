@@ -1,0 +1,32 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "Test Github tied with Heroku to test before pushing to Prod Github",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbarcala23/Project3-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbarcala23/Project3-Test/issues"
+  },
+  "homepage": "https://github.com/cbarcala23/Project3-Test#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "sequelize": "^5.21.4"
+  }
+}
