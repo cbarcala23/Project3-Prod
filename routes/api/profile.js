@@ -34,10 +34,10 @@ router.post(
   [
     auth,
     [
-      check("bio", "Bio is required")
+      check("status", "Status is required")
         .not()
         .isEmpty(),
-      check("hobbies", "Hobbies are required")
+      check("skills", "Skills is required")
         .not()
         .isEmpty()
     ]
@@ -49,13 +49,13 @@ router.post(
     }
 
     const {
-      languages,
-      hometown,
+      company,
+      website,
       location,
       bio,
-      gender,
-      // githubusername,
-      hobbies,
+      status,
+      githubusername,
+      skills,
       youtube,
       facebook,
       twitter,
@@ -66,26 +66,20 @@ router.post(
     // Build profile object
     const profileFields = {};
     profileFields.user = req.user.id;
-    // if (languages) profileFields.languages = languages;
-    if (hometown) profileFields.hometown = hometown;
+    if (company) profileFields.company = company;
+    if (website) profileFields.website = website;
     if (location) profileFields.location = location;
     if (bio) profileFields.bio = bio;
-    if (gender) profileFields.gender = gender;
-    // if (githubusername) profileFields.githubusername = githubusername;
+    if (status) profileFields.status = status;
+    if (githubusername) profileFields.githubusername = githubusername;
     // if (skills) {
     //   profileFields.skills = skills.split(",").map(skill => skill.trim());
     // }
-    if (hobbies) {
-      profileFields.hobbies = hobbies
+    if (skills) {
+      profileFields.skills = skills
         .toString()
         .split(",")
-        .map(hobby => hobby.trim());
-    };
-    if (languages) {
-      profileFields.languages = languages
-        .toString()
-        .split(",")
-        .map(language => language.trim());
+        .map(skill => skill.trim());
     }
 
     // Build social object
@@ -203,7 +197,7 @@ router.put(
     // destructuring
     const {
       title,
-      languages,
+      company,
       location,
       from,
       to,
@@ -213,7 +207,7 @@ router.put(
 
     const newExp = {
       title,
-      languages,
+      company,
       location,
       from,
       to,

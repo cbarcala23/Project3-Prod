@@ -6,37 +6,34 @@ const ProfileSchema = new mongoose.Schema({
         //reference user model
         ref: 'user'
     },
-    languages: {
-        type: [String]
+    company: {
+        type: String
     },
     location: {
         type: String
     },
-    hometown: {
-        type: String
-    },
-    gender: {
+    status: {
         type: String,
         required: true
     },
-    hobbies: {
+    skills: {
         type: [String],
         required: true
     },
     bio: {
         type: String
     },
-    // githubusername: {
-    //     type: String
-    // },
+    githubusername: {
+        type: String
+    },
     experience: [
         {
             title: {
                 type: String,
                 required: true
             },
-            languages: {
-                type: [String],
+            company: {
+                type: String,
                 required: true
             },
             location: {
