@@ -5,12 +5,15 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import DashboardActions from "./DashboardActions";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
+import Container from "react-bootstrap/Container";
+
 
 const Dashboard = ({
   getCurrentProfile,
   deleteAccount,
   auth: { user },
-  profile: { profile, loading }
+  profile: { profile, loading, name, avatar }
+  
 }) => {
   useEffect(() => {
     getCurrentProfile();
@@ -18,30 +21,33 @@ const Dashboard = ({
   return loading && profile === null ? (
     <Spinner />
   ) : (
-    <Fragment>
-      <h1 className="large text-primary">User Profile</h1>
-      <p className="lead">
-        <i className="fas fa-user"></i>Welcome {user && user.name}
-      </p>
-      {profile !== null ? (
-        <Fragment>
-          <DashboardActions />
+    <Container className="mx-auto text-left">
+      <Fragment>
+      <img class="round-img my-1" src={avatar} alt="" />
+        <h1 className="large">Your Profile</h1>
+        <p className="lead">
+          Hello <span className="bold">{user && user.name}</span>
+        </p>
+        {profile !== null ? (
+          <Fragment>
+            <DashboardActions />
 
-          <div className="my-2">
-            <button className="btn btn-danger" onClick={() => deleteAccount()}>
-              <i className="fas fa-user-minus"></i> Delete My Account
-            </button>
-          </div>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <p>You have not yet setup a profile. Please add some info</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
-            Create Profile
-          </Link>
-        </Fragment>
-      )}
-    </Fragment>
+            <div className="my-2">
+              <button className="btn btn-danger" onClick={() => deleteAccount()}>
+                Delete My Account
+              </button>
+            </div>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <p>You have not yet setup a profile. Please add some info</p>
+            <Link to="/create-profile" className="btn btn-primary my-1">
+              Create Profile
+            </Link>
+          </Fragment>
+        )}
+      </Fragment>
+    </Container>
   );
 };
 

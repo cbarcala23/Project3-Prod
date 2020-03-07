@@ -1,0 +1,14 @@
+#map {
+    height: 100vh;
+    border-radius: 10px;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #renderedinfo {
+    margin-top: 30px;
+    padding: 10px;
+    color: white;
+  }

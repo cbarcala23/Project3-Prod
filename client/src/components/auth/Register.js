@@ -35,13 +35,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <section className="container">
-        <h1 className="large text-primary">Sign Up</h1>
+        <h1 className="large">SIGN UP</h1>
         <p className="lead">
-          <i className="fas fa-user"></i> Create Your Account so you can start making new friends.
+          Create Your Account so you can start making new friends.
         </p>
         <form className="form" onSubmit={e => onSubmit(e)}>
           <div className="form-group">
             <input
+              className="form-control"
               type="text"
               placeholder="Name"
               name="name"
@@ -52,6 +53,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <div className="form-group">
             <input
+              className="form-control"
               type="email"
               placeholder="Email Address"
               name="email"
@@ -65,6 +67,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <div className="form-group">
             <input
+              className="form-control"
               type="password"
               placeholder="Password"
               name="password"
@@ -75,6 +78,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <div className="form-group">
             <input
+              className="form-control"
               type="password"
               placeholder="Confirm Password"
               name="password2"
@@ -86,7 +90,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           <input type="submit" className="btn btn-primary" value="Register" />
         </form>
         <p className="my-1">
-          Already have an account? <Link to="/login">Sign In</Link>
+          Already have an account? <Link to="/login">Log In</Link>
         </p>
       </section>
     </Fragment>

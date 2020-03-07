@@ -13,13 +13,13 @@ const ProfileTop = ({
   }
 }) => {
   return (
-    <div class="profile-top bg-primary p-2">
+    <div class="profile-top profileTop-bg p-3">
       <img class="round-img my-1" src={avatar} alt="" />
-      <h1 class="large">{name}</h1>
-      <p class="lead">
-        {status} {company && <span> at {company}</span>}
-      </p>
-      <p>{location && <span>{location}</span>}</p>
+      <h1 class="text-light">{name}</h1>
+      {/* <p class="lead">
+        {status} {company}
+      </p> */}
+      
       {/* <div class="icons my-1">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-globe fa-2x"></i>
