@@ -22,12 +22,14 @@
   "homepage": "https://github.com/cbarcala23/MERNSTACKlearning#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.4.1",
     "config": "^3.2.6",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.2",
+    "react-bootstrap": "^1.0.0-beta.17",
     "request": "^2.88.2"
   },
   "devDependencies": {

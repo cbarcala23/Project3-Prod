@@ -22,19 +22,22 @@ const Login = ({ login, isAuthenticated }) => {
 
   // Redirect if logged in
   if(isAuthenticated) {
-    return <Redirect to="/dashboard" />
+    return <Redirect to="/map" />
   }
 
   return (
     <Fragment>
       <section className="container">
-        <h1 className="large text-primary">Sign In</h1>
+
+        <h1 className="large">SIGN IN</h1>
         <p className="lead">
-          <i className="fas fa-user"></i> Sign In and CheckIN!
+        Sign in now to checkIN
+
         </p>
         <form className="form" onSubmit={e => onSubmit(e)}>
           <div className="form-group">
             <input
+              className="form-control"
               type="email"
               placeholder="Email Address"
               name="email"
@@ -44,6 +47,7 @@ const Login = ({ login, isAuthenticated }) => {
           </div>
           <div className="form-group">
             <input
+              className="form-control"
               type="password"
               placeholder="Password"
               name="password"
@@ -54,7 +58,7 @@ const Login = ({ login, isAuthenticated }) => {
           </div>
           <input type="submit" className="btn btn-primary" value="Login" />
         </form>
-        <p className="my-1">
+        <p className="mt-3">
           Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
       </section>

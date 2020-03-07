@@ -1,0 +1,103 @@
+/* @import-normalize; */
+
+@import 'textStyles.css';
+@import 'paddingMargin.css';
+@import 'button.css';
+@import 'navbar.css';
+@import 'landing.css';
+@import 'profile.css';
+@import 'posts.css';
+@import 'mobileStyles.css';
+@import 'form.css';
+
+/* Global Styles */
+:root {
+  --primary-color: #a3b2ff;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #DBDCEB;
+  color: #333;
+  background: linear-gradient( #c0cafc, #afcfec, #bdece5);
+  height: 100%;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.container-fluid {
+  width: 80%;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.venue-bg {
+  background: #7a90ff;
+  border-radius: 10px;
+}
+
+.profile-bg {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.profileTop-bg {
+  background: #c0cafc;
+  border-radius: 10px;
+}
+
+.fa-star {
+  color: #c0cafc;
+}
+
+

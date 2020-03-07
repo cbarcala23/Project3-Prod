@@ -1,0 +1,39 @@
+/* Text Styles*/
+.x-large {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .large {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #a3b2ff;
+  }
+
+  .huge {
+    color: rgba(#ffffff, 0.5);
+  }
+
+  .bold {
+    font-weight: bold;
+    color: #a3b2ff;
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-primary {
+    color: var(--primary-color);
+  }
+  
+  .text-dark {
+    color: var(--dark-color);
+  }
